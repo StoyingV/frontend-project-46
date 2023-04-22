@@ -19,5 +19,5 @@ test('Readfile', () => {
     proxy: '123.234.53.22',
     follow: false,
   };
-  expect(readFileFlat(path.resolve(process.cwd(), '../__tests__/file1.json'))).toEqual(obj);
+  expect(readFileFlat(path.resolve(process.cwd(), './__tests__/__fixtures__/file1.json'))).toEqual(obj);
 });
