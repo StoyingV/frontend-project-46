@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Differenses definder",
   "type": "module",
-  "main": "index.js",
+  "main": "bin/gendiff.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",

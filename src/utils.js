@@ -4,9 +4,9 @@ import path from 'node:path';
 
 export const getPath = (argument) => {
   const workingDir = process.cwd();
-  if (workingDir.startsWith(argument)) {
-    return argument;
-  }
+  //  if (workingDir.startsWith(argument)) {
+  // return argument;
+  // }
   return path.resolve(workingDir, argument);
 };
 
