@@ -9,5 +9,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/25ecc975e7f3819b160f/test_coverage)](https://codeclimate.com/github/StoyingV/frontend-project-46/test_coverage)
 
 ## Example of work
-Find differenses between two json flat files:
+Find differenses between two JSON flat files:
 [![asciicast](https://asciinema.org/a/bVuOmmkW4pv6QzTKzvGAQuKKX.svg)](https://asciinema.org/a/bVuOmmkW4pv6QzTKzvGAQuKKX)
+
+Find differenses between two YML flat files:
+[![asciicast](https://asciinema.org/a/sCK5qSN4oNbaTDynihReV9tqD.svg)](https://asciinema.org/a/sCK5qSN4oNbaTDynihReV9tqD)
