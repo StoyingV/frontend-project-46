@@ -20,4 +20,6 @@ test('Readfile', () => {
     follow: false,
   };
   expect(readFileFlat(path.resolve(process.cwd(), './__tests__/__fixtures__/file1.json'))).toEqual(obj);
+  expect(readFileFlat(path.resolve(process.cwd(), './__tests__/__fixtures__/file1.yaml'))).toEqual(obj);
+  expect(readFileFlat(path.resolve(process.cwd(), './__tests__/__fixtures__/file1.yml'))).toEqual(obj);
 });
