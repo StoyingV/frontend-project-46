@@ -1,25 +1,30 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/extensions */
 import path from 'node:path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import getDiff from '../src/getdiffflat.js';
 
+// eslint-disable-next-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = dirname(__filename);
+const answer = '{ \n  - follow: false\n    host: hexlet.io\n  - proxy: 123.234.53.22\n  - timeout: 50\n  + timeout: 20\n  + verbose: true\n}';
+
+const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filename);
+
 test('Flat object differences json', () => {
-  const path1 = path.resolve(process.cwd(), './__tests__/__fixtures__/file1.json');
-  const path2 = path.resolve(process.cwd(), './__tests__/__fixtures__/file2.json');
-  const answer = '- follow: false\n  host: hexlet.io\n- proxy: 123.234.53.22\n- timeout: 50\n+ timeout: 20\n+ verbose: true';
-  expect(getDiff(path1, path2)).toEqual(answer);
+  expect(getDiff(getFixturePath('file1.json'), getFixturePath('file2.json'))).toEqual(answer);
 });
 
 test('Flat object differences yaml', () => {
-  const path1 = path.resolve(process.cwd(), './__tests__/__fixtures__/file1.yaml');
-  const path2 = path.resolve(process.cwd(), './__tests__/__fixtures__/file2.yaml');
-  const answer = '- follow: false\n  host: hexlet.io\n- proxy: 123.234.53.22\n- timeout: 50\n+ timeout: 20\n+ verbose: true';
-  expect(getDiff(path1, path2)).toEqual(answer);
+  expect(getDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'))).toEqual(answer);
 });
 
 test('Flat object differences yml', () => {
-  const path1 = path.resolve(process.cwd(), './__tests__/__fixtures__/file1.yml');
-  const path2 = path.resolve(process.cwd(), './__tests__/__fixtures__/file2.yml');
-  const answer = '- follow: false\n  host: hexlet.io\n- proxy: 123.234.53.22\n- timeout: 50\n+ timeout: 20\n+ verbose: true';
-  expect(getDiff(path1, path2)).toEqual(answer);
+  expect(getDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'))).toEqual(answer);
+});
+
+test('Flat object differences json and yml', () => {
+  expect(getDiff(getFixturePath('file1.json'), getFixturePath('file2.yml'))).toEqual(answer);
 });
