@@ -4,13 +4,13 @@ import { readFileFlat } from './utils.js';
 const keyCompare = (key, obj1, obj2) => {
   if (Object.hasOwn(obj1, key) && Object.hasOwn(obj2, key)) {
     return obj1[key] === obj2[key]
-      ? `    ${key}: ${obj1[key]}`
-      : [`  - ${key}: ${obj1[key]}`, `  + ${key}: ${obj2[key]}`];
+      ? `  ${key}: ${obj1[key]}`
+      : [`- ${key}: ${obj1[key]}`, `+ ${key}: ${obj2[key]}`];
   }
   if (Object.hasOwn(obj1, key)) {
-    return `  - ${key}: ${obj1[key]}`;
+    return `- ${key}: ${obj1[key]}`;
   }
-  return `  + ${key}: ${obj2[key]}`;
+  return `+ ${key}: ${obj2[key]}`;
 };
 
 const getDiff = (path1, path2) => {
@@ -25,7 +25,7 @@ const getDiff = (path1, path2) => {
     for (const key of allKeys) {
       acc.push(keyCompare(key, obj1, obj2));
     }
-    const result = ['{ ', ...acc.flat(), '}'].join('\n');
+    const result = ['{', ...acc.flat(), '}'].join('\n');
     return result;
   };
   return compareObject(file1, file2);

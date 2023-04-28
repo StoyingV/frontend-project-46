@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 // eslint-disable-next-line import/extensions
-import getDiff from '../src/getdiffflat.js';
+import getDiffRec from '../src/getdiff_rec.js';
 
 program
   .description('Compares two configuration files and shows a difference.')
@@ -12,7 +12,7 @@ program
   .option('-f, --format <type>', 'output format')
   .action((filepath1, filepath2) => {
     // eslint-disable-next-line no-console
-    console.log(getDiff(filepath1, filepath2));
+    console.log(getDiffRec(filepath1, filepath2));
   });
 
 program.parse();
