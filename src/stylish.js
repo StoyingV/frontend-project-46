@@ -5,13 +5,14 @@ export const formatter = (comparedObject, depth) => {
   const keys = Object.keys({ ...comparedObject });
   let acc = '';
   acc += '{\n';
+  // eslint-disable-next-line no-restricted-syntax
   for (const key of keys) {
-    acc += ' '.repeat(depth * 4 + 2) + key + ': ';
+    acc += `${' '.repeat(depth * 4 + 2) + key}: `;
     if (typeof comparedObject[key] !== 'object') {
       const result = `${comparedObject[key]}\n`;
       acc += result;
     } else if (_.isNull(comparedObject[key])) {
-      acc += 'null' + '\n';
+      acc += 'null\n';
     } else if (typeof comparedObject[key] === 'object') {
       acc += `${formatter(comparedObject[key], depth + 1)}\n`;
     }
