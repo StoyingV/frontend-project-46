@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { readFileSync } from 'node:fs';
 import getDiffRec from '../src/getdiff_rec.js';
-import { formatter } from '../src/stylish.js';
+import { stylish } from '../src/stylish.js';
 
 // eslint-disable-next-line no-underscore-dangle
 const __filename = fileURLToPath(import.meta.url);
@@ -17,7 +17,7 @@ const answerFlat = readFileSync(getFixturePath('answerFlat.txt'), 'utf8');
 const answerRec = readFileSync(getFixturePath('answerRec.txt'), 'utf8');
 
 test('Flat object differences json and yml', () => {
-  expect(formatter(getDiffRec(getFixturePath('file1.json'), getFixturePath('file2.yml')), 0)).toEqual(answerFlat);
+  expect(stylish(getDiffRec(getFixturePath('file1.json'), getFixturePath('file2.yml')), 0)).toEqual(answerFlat);
 });
 
 test('Recursive files difference json and yml', () => {

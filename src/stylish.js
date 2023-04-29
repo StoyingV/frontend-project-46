@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 // eslint-disable-next-line import/prefer-default-export
-export const formatter = (comparedObject, depth) => {
+export const stylish = (comparedObject, depth) => {
   const keys = Object.keys({ ...comparedObject });
   let acc = '';
   acc += '{\n';
@@ -14,7 +14,7 @@ export const formatter = (comparedObject, depth) => {
     } else if (_.isNull(comparedObject[key])) {
       acc += 'null\n';
     } else if (typeof comparedObject[key] === 'object') {
-      acc += `${formatter(comparedObject[key], depth + 1)}\n`;
+      acc += `${stylish(comparedObject[key], depth + 1)}\n`;
     }
   }
   acc += `${' '.repeat(depth * 4)}}`;
