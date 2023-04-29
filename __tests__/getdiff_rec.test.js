@@ -21,5 +21,5 @@ test('Flat object differences json and yml', () => {
 });
 
 test('Recursive files difference json and yml', () => {
-  expect(formatter(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml')), 0)).toEqual(answerRec);
+  expect(stylish(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml')), 0)).toEqual(answerRec);
 });

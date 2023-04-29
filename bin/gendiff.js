@@ -15,7 +15,7 @@ program
   .action((filepath1, filepath2) => {
     // eslint-disable-next-line no-console
     if (program.opts().format === 'stylish') {
-      console.log(stylish((getDiffRec(filepath1, filepath2))));
+      console.log(stylish((getDiffRec(filepath1, filepath2)), 0));
     }
   });
 
