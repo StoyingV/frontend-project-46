@@ -3,8 +3,6 @@
 import { program } from 'commander';
 // eslint-disable-next-line import/extensions
 import getDiffRec from '../src/getdiff_rec.js';
-// eslint-disable-next-line import/extensions
-import { stylish } from '../src/stylish.js';
 
 program
   .description('Compares two configuration files and shows a difference.')
@@ -14,9 +12,7 @@ program
   .option('-f, --format <type>', 'output format', 'stylish')
   .action((filepath1, filepath2) => {
     // eslint-disable-next-line no-console
-    if (program.opts().format === 'stylish') {
-      console.log(stylish((getDiffRec(filepath1, filepath2)), 0));
-    }
+    console.log(getDiffRec(filepath1, filepath2, program.opts().format));
   });
 
 program.parse();

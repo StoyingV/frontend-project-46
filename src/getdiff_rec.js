@@ -2,6 +2,8 @@
 import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import { readFileFlat } from './utils.js';
+// eslint-disable-next-line import/extensions
+import { stylish } from '../formaters/stylish.js';
 
 const formatAddOption = (item) => {
   if (typeof item !== 'object' || _.isNull(item)) {
@@ -53,8 +55,11 @@ const compareObject = (obj1, obj2) => {
   return acc;
 };
 
-export default (path1, path2) => {
+export default (path1, path2, format) => {
   const file1 = readFileFlat(path1);
   const file2 = readFileFlat(path2);
+  if (format === 'stylish') {
+    return stylish(compareObject(file1, file2), 0);
+  }
   return compareObject(file1, file2);
 };
