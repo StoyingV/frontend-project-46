@@ -4,6 +4,8 @@ import _ from 'lodash';
 import { readFileFlat } from './utils.js';
 // eslint-disable-next-line import/extensions
 import { stylish } from '../formaters/stylish.js';
+// eslint-disable-next-line import/extensions
+import plain from '../formaters/plain.js';
 
 const formatAddOption = (item) => {
   if (typeof item !== 'object' || _.isNull(item)) {
@@ -32,7 +34,7 @@ const keyCompare = (key, param1, param2) => {
     : { [keyMinus]: formatAddOption(param1), [keyPlus]: formatAddOption(param2) };
 };
 
-const compareObject = (obj1, obj2) => {
+export const compareObject = (obj1, obj2) => {
   const allKeys = Object.keys({ ...obj1, ...obj2 }).sort();
   let acc = {};
   // eslint-disable-next-line no-restricted-syntax
@@ -60,6 +62,9 @@ export default (path1, path2, format) => {
   const file2 = readFileFlat(path2);
   if (format === 'stylish') {
     return stylish(compareObject(file1, file2), 0);
+  }
+  if (format === 'plain') {
+    return plain(compareObject(file1, file2));
   }
   return compareObject(file1, file2);
 };

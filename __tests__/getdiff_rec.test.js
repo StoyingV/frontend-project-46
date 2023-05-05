@@ -15,7 +15,6 @@ const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filena
 const answerFlat = readFileSync(getFixturePath('answerFlat.txt'), 'utf8');
 const answerRecStylish = readFileSync(getFixturePath('answerRec.txt'), 'utf8');
 const answerRecPlain = readFileSync(getFixturePath('answerRecPlain.txt'), 'utf8');
-console.log(answerRecPlain);
 
 test('Flat object differences json and yml', () => {
   expect(getDiffRec(getFixturePath('file1.json'), getFixturePath('file2.yml'), 'stylish')).toEqual(answerFlat);
