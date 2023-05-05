@@ -1,4 +1,4 @@
-name: diff flat tests
+name: diff tests
 on: push
 jobs:
   build:
