@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/extensions
 import { readFileFlat } from './utils.js';
 
 const keyCompare = (key, obj1, obj2) => {

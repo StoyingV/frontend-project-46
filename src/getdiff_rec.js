@@ -1,10 +1,6 @@
-// eslint-disable-next-line import/extensions
 import _ from 'lodash';
-// eslint-disable-next-line import/extensions
 import { readFileFlat } from './utils.js';
-// eslint-disable-next-line import/extensions
 import { stylish } from '../formaters/stylish.js';
-// eslint-disable-next-line import/extensions
 import plain from '../formaters/plain.js';
 
 const formatAddOption = (item) => {
