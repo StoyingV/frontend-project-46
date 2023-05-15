@@ -8,6 +8,29 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/25ecc975e7f3819b160f/test_coverage)](https://codeclimate.com/github/StoyingV/frontend-project-46/test_coverage)
 
+## Description
+This is consolr utilite for comparing different JSON YAML YML files.
+
+
+## **Setup Guide**
+1) Clone repositary on your PC
+```
+git clone git@github.com:StoyingV/frontend-project-44.git
+```
+2) Install dependesys
+
+```
+make install
+```
+OR
+```
+sudo npm ci
+```
+
+For runing:
+```
+
+
 ## Example of work
 Find differenses between two JSON flat files:
 [![asciicast](https://asciinema.org/a/bVuOmmkW4pv6QzTKzvGAQuKKX.svg)](https://asciinema.org/a/bVuOmmkW4pv6QzTKzvGAQuKKX)
