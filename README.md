@@ -15,7 +15,7 @@ This is consolr utilite for comparing different JSON YAML YML files.
 ## **Setup Guide**
 1) Clone repositary on your PC
 ```
-git clone git@github.com:StoyingV/frontend-project-44.git
+git clone git@github.com:StoyingV/frontend-project-46.git
 ```
 2) Install dependesys
 
