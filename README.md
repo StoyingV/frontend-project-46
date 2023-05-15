@@ -29,6 +29,8 @@ sudo npm ci
 
 For runing:
 ```
+node bin/gendiff.js -h
+```
 
 
 ## Example of work
