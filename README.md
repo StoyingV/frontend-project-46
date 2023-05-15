@@ -17,3 +17,9 @@ Find differenses between two YML flat files:
 
 Find differenses for complicated recursive files JSON and YAML/YML:
 [![asciicast](https://asciinema.org/a/C7TAOdpAJnCxUKmEMIoVPsTyR.svg)](https://asciinema.org/a/C7TAOdpAJnCxUKmEMIoVPsTyR)
+
+Find differenses for complicated recursive files JSON and YAML/YML output using formatter PLAIN:
+[![asciicast](https://asciinema.org/a/ATe2VpFmIaBofWZCUuVBMuw6M.svg)](https://asciinema.org/a/ATe2VpFmIaBofWZCUuVBMuw6M)
+
+Find differenses for complicated recursive files JSON and YAML/YML output using formatter JSON (return json string):
+[![asciicast](https://asciinema.org/a/oHtLfMrNeG0KAAV95frsOQfnr.svg)](https://asciinema.org/a/oHtLfMrNeG0KAAV95frsOQfnr)
