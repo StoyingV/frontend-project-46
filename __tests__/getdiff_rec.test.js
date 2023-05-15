@@ -15,6 +15,7 @@ const getFixturePath = (filename) => path.join(__dirname, '__fixtures__', filena
 const answerFlat = readFileSync(getFixturePath('answerFlat.txt'), 'utf8');
 const answerRecStylish = readFileSync(getFixturePath('answerRec.txt'), 'utf8');
 const answerRecPlain = readFileSync(getFixturePath('answerRecPlain.txt'), 'utf8');
+const answerRecJson = readFileSync(getFixturePath('answerRecJson.txt'), 'utf8');
 
 test('Flat object differences json and yml', () => {
   expect(getDiffRec(getFixturePath('file1.json'), getFixturePath('file2.yml'), 'stylish')).toEqual(answerFlat);
@@ -26,4 +27,8 @@ test('Recursive files difference json and yml formatter Stylish', () => {
 
 test('Recursive files difference json and yml formatter Plain', () => {
   expect(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml'), 'plain')).toEqual(answerRecPlain);
+});
+
+test('Recursive files difference json and yml formatter JSON', () => {
+  expect(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml'), 'json')).toEqual(answerRecJson);
 });

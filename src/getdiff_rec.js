@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { readFileFlat } from './utils.js';
 import { stylish } from '../formaters/stylish.js';
 import plain from '../formaters/plain.js';
+import jsonFormater from '../formaters/json.js';
 
 const formatAddOption = (item) => {
   if (typeof item !== 'object' || _.isNull(item)) {
@@ -61,6 +62,9 @@ export default (path1, path2, format) => {
   }
   if (format === 'plain') {
     return plain(compareObject(file1, file2));
+  }
+  if (format === 'json') {
+    return jsonFormater(compareObject(file1, file2));
   }
   return compareObject(file1, file2);
 };
