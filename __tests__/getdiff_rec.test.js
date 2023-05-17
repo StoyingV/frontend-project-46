@@ -32,3 +32,7 @@ test('Recursive files difference json and yml formatter Plain', () => {
 test('Recursive files difference json and yml formatter JSON', () => {
   expect(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml'), 'json')).toEqual(answerRecJson);
 });
+
+test('Not stanart format choosing', () => {
+  expect(getDiffRec(getFixturePath('fileRec1.json'), getFixturePath('fileRec2.yml'), 'exe')).toEqual('format is not indefined');
+});
