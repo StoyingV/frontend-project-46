@@ -26,6 +26,7 @@
   "dependencies": {
     "commander": "^10.0.1",
     "lodash": "^4.17.21",
+    "test": "^3.3.0",
     "yaml": "^2.2.2"
   },
   "bin": {
