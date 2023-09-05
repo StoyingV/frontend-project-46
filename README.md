@@ -22,7 +22,7 @@ git clone git@github.com:StoyingV/frontend-project-46.git
 ```
 make install
 ```
-OR
+ORе
 ```
 sudo npm ci
 ```
