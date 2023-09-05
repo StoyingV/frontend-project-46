@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Differenses definder",
   "type": "module",
-  "main": "bin/gendiff.js",
+  "main": "src/getdiff_rec.js",
   "scripts": {
     "test": "npx jest"
   },
