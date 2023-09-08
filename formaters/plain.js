@@ -39,7 +39,8 @@ const analyze = (object, key, pathAcc) => {
 };
 
 export default (comparedObject1) => {
-  let resultStr = '';
+  // eslint-disable-next-line no-var
+  var resultStr = '';
   const plain1 = (comparedObject, pathAcc) => {
     const keys = Object.keys({ ...comparedObject });
     // eslint-disable-next-line no-restricted-syntax
