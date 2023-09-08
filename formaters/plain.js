@@ -1,5 +1,5 @@
 /* eslint-disable no-var */
-/* eslint-disable no-mutating-methods */
+/* eslint-disable vp/no-mutating-methods */
 
 import _ from 'lodash';
 
