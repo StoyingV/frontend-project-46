@@ -8,5 +8,5 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0
-  no-mutation: 0
+  fp/no-mutating-methods: 0
   no-loops: 0
