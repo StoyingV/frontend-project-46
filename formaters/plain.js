@@ -1,3 +1,6 @@
+/* eslint-disable no-var */
+/* eslint-disable no-mutating-methods */
+
 import _ from 'lodash';
 
 const dataConvert = (data) => {
